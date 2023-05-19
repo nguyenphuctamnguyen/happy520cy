@@ -51,6 +51,9 @@ function timeElapse(date) {
     }
     seconds = Math.floor(seconds % 60);
     seconds = (seconds + "").replace(/\.\d*/, "");
+    if (seconds < 10) {
+        seconds = "0" + seconds;
+    }
     var result =
         '第 <span class="digit">' +
         days +
